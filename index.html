@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center; height: 100vh">
+      <h1>Картинки!</h1>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50vh;
+        "
+      >
+        <button onclick="start_play(1)" style="margin-right: 5px">
+          Single Player
+        </button>
+        <button onclick="start_play(2)" style="margin-left: 5px">
+          Multiplayer
+        </button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const start_play = async (type) => {
+      window.location.href = "http://localhost:5000/game?type=" + type;
+    };
+  </script>
+</html>
